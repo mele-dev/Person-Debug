@@ -6,7 +6,6 @@
 using System;
 using System.IO;
 using NUnit.Framework;
-using Ucu.Poo.Persons;
 
 namespace Ucu.Poo.Persons.Tests
 {

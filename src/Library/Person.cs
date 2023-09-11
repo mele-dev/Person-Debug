@@ -42,7 +42,7 @@ namespace Ucu.Poo.Persons
         {
             get
             {
-                return $"{this.Name}{this.FamilyName}";
+                return $"{this.Name} {this.FamilyName}";
             }
         }
 
@@ -59,7 +59,7 @@ namespace Ucu.Poo.Persons
             get
             {
                 DateTime today = DateTime.Today;
-                int age = this.BirthDate.Year - today.Year;
+                int age = today.Year - this.BirthDate.Year;
 
                 if (today.Month < this.BirthDate.Month || (today.Month == this.BirthDate.Month && today.Day < this.BirthDate.Day))
                 {
@@ -82,62 +82,62 @@ namespace Ucu.Poo.Persons
             }
         }
 
-    /*
-        /// <summary>
-        /// Compara dos objetos para determinar si son iguales.
-        /// </summary>
-        /// <param name="a">Uno de los objetos a comparar.</param>
-        /// <param name="b">El otro objeto a comparar.</param>
-        /// <returns><c>True</c> si el primer objeto es igual al segundo; <c>False</c> en caso contrario.</returns>
-        public static bool operator == (Person a, Person b)
-        {
-            return a.Equals(b);
-        }
-
-        /// <summary>
-        /// Compara dos objetos para determinar si son diferentes.
-        /// </summary>
-        /// <param name="a">Uno de los objetos a comparar.</param>
-        /// <param name="b">El otro objeto a comparar.</param>
-        /// <returns><c>True</c> si el primer objeto no es igual al segundo; <c>False</c> en caso contrario.</returns>
-        public static bool operator != (Person a, Person b)
-        {
-            return !a.Equals(b);
-        }
-
-        /// <summary>
-        /// Determina cuándo esta persona es igual a otra que se recibe como parámetro.
-        /// </summary>
-        /// <param name="obj">El objeto a comparar.</param>
-        /// <returns><c>True</c> si este objeto es igual al que se recibe como parámetro; <c>False</c> en caso
-        /// contrario.</returns>
-        public override bool Equals(object obj)
-        {
-            // Si el otro objeto es null no puede ser igual a este objeto que no es null; retornar False
-            if (obj == null)
+        /*
+            /// <summary>
+            /// Compara dos objetos para determinar si son iguales.
+            /// </summary>
+            /// <param name="a">Uno de los objetos a comparar.</param>
+            /// <param name="b">El otro objeto a comparar.</param>
+            /// <returns><c>True</c> si el primer objeto es igual al segundo; <c>False</c> en caso contrario.</returns>
+            public static bool operator == (Person a, Person b)
             {
-                return false;
+                return a.Equals(b);
             }
-            // Si el otro objeto no es del mismo tipo que este objeto no pueden ser iguales; retornar False
-            else if  (!this.GetType().Equals(obj.GetType()))
-            {
-                return false;
-            }
-            // Retornar True si el otro objeto tiene el mismo texto que este objeto; y False en caso contrario
-            else
-            {
-                return this.FullName.Equals(((Person)obj).FullName);
-            }
-        }
 
-        /// <summary>
-        /// Genera un código hash para este objeto.
-        /// </summary>
-        /// <returns>El código hash generado.</returns>
-        public override int GetHashCode()
-        {
-            return this.FullName.GetHashCode();
-        }
-    */
+            /// <summary>
+            /// Compara dos objetos para determinar si son diferentes.
+            /// </summary>
+            /// <param name="a">Uno de los objetos a comparar.</param>
+            /// <param name="b">El otro objeto a comparar.</param>
+            /// <returns><c>True</c> si el primer objeto no es igual al segundo; <c>False</c> en caso contrario.</returns>
+            public static bool operator != (Person a, Person b)
+            {
+                return !a.Equals(b);
+            }
+
+            /// <summary>
+            /// Determina cuándo esta persona es igual a otra que se recibe como parámetro.
+            /// </summary>
+            /// <param name="obj">El objeto a comparar.</param>
+            /// <returns><c>True</c> si este objeto es igual al que se recibe como parámetro; <c>False</c> en caso
+            /// contrario.</returns>
+            public override bool Equals(object obj)
+            {
+                // Si el otro objeto es null no puede ser igual a este objeto que no es null; retornar False
+                if (obj == null)
+                {
+                    return false;
+                }
+                // Si el otro objeto no es del mismo tipo que este objeto no pueden ser iguales; retornar False
+                else if  (!this.GetType().Equals(obj.GetType()))
+                {
+                    return false;
+                }
+                // Retornar True si el otro objeto tiene el mismo texto que este objeto; y False en caso contrario
+                else
+                {
+                    return this.FullName.Equals(((Person)obj).FullName);
+                }
+            }
+
+            /// <summary>
+            /// Genera un código hash para este objeto.
+            /// </summary>
+            /// <returns>El código hash generado.</returns>
+            public override int GetHashCode()
+            {
+                return this.FullName.GetHashCode();
+            }
+        */
     }
 }

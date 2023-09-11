@@ -18,6 +18,10 @@ namespace Ucu.Poo.Persons
         /// </summary>
         public static void Main()
         {
+
+
+            Console.WriteLine("No me logueo todavia");
+
             AssignVariableWithObject();
             AssignTwoVariablesWithObject();
             CompareDifferentObjects();
